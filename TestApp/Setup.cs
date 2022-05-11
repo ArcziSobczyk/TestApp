@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Core;
 using Microsoft.Extensions.Logging;
 using MvvmCross.IoC;
 using MvvmCross.Platforms.Android.Core;
@@ -15,28 +16,16 @@ using System.Text;
 
 namespace TestApp
 {
-    public class Setup : MvxAndroidSetup
-    {
-        private Context context;
-        public Setup(Context applicationContext)
-        {
-            this.context = applicationContext;
-        }
+	public class Setup : MvxAndroidSetup<App>
+	{
+		protected override ILoggerFactory CreateLogFactory()
+		{
+			return null;
+		}
 
-        protected override IMvxApplication CreateApp(IMvxIoCProvider iocProvider)
-        {
-            //throw new NotImplementedException();
-            return null;
-        }
-
-        protected override ILoggerFactory CreateLogFactory()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override ILoggerProvider CreateLogProvider()
-        {
-            throw new NotImplementedException();
-        }
-    }
+		protected override ILoggerProvider CreateLogProvider()
+		{
+			return null;
+		}
+	}
 }

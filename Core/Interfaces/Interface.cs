@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Core.Intrefaces
 {
     public interface Interface
     {
-
+        //Task<Asset> GetCryptoData(string query);
     }
 }

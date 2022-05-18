@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    android:weightSum="4"
+    android:padding="3dp">
+    <TextView
+        android:id="@+id/asset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+		android:text="Asset"
+        app:MvxBind="Text Asset.Name"/>
+    <TextView
+        android:id="@+id/amount"
+        android:layout_centerInParent="true"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Amount"
+        app:MvxBind="Text Asset.Amount"/>
+    <TextView
+        android:id="@+id/value"
+        android:layout_toLeftOf="@+id/deleteButton"
+        android:layout_centerVertical="true"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Value"
+        app:MvxBind="Text Asset.Value"/>
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="3dp"
+        android:text="@string/deleteButton"/>
+</LinearLayout>
